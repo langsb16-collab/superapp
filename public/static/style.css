@@ -1,10 +1,10 @@
 /* ==================== K-Resident One - 전역 스타일 ==================== */
 :root {
-  /* 컬러 팔레트 */
-  --primary: #667eea;
-  --primary-dark: #5a67d8;
-  --secondary: #764ba2;
-  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* 컬러 팔레트 - 주황색 테마 */
+  --primary: #ff6b35;
+  --primary-dark: #e85a2a;
+  --secondary: #ff8c42;
+  --gradient: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -113,7 +113,63 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* 언어 드롭다운 */
+/* 언어 선택기 인라인 */
+.language-selector-inline {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.language-selector-inline .language-option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: auto;
+}
+
+.language-selector-inline .language-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: none;
+}
+
+.language-selector-inline .language-option.active {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+}
+
+.language-selector-inline .language-option.active::after {
+  display: none;
+}
+
+.language-selector-inline .lang-flag {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.language-selector-inline .lang-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  text-align: left;
+}
+
+.language-selector-inline .language-option:hover .lang-name {
+  color: white;
+}
+
+.language-selector-inline .language-option.active .lang-name {
+  color: white;
+}
 .language-dropdown {
   position: relative;
 }
@@ -309,14 +365,16 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .service-card {
   background: white;
-  padding: var(--space-6);
-  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   transition: all 0.3s;
 }
@@ -327,60 +385,66 @@ body {
 }
 
 .service-icon {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   background: var(--gradient);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 32px;
-  margin-bottom: var(--space-4);
+  font-size: 24px;
+  margin-bottom: var(--space-3);
 }
 
 .service-card h3 {
-  font-size: 24px;
-  margin-bottom: var(--space-3);
+  font-size: 18px;
+  margin-bottom: var(--space-2);
   color: var(--gray-900);
 }
 
 .service-card p {
   color: var(--gray-600);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .service-features {
   list-style: none;
   padding: 0;
+  margin-bottom: var(--space-3);
 }
 
 .service-features li {
-  padding: var(--space-2) 0;
+  padding: 4px 0;
   color: var(--gray-600);
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: 6px;
+  font-size: 13px;
 }
 
 .service-features li::before {
   content: '✓';
   color: var(--success);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .btn-secondary {
   background: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
-  padding: 10px 24px;
-  border-radius: var(--radius-lg);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
   width: 100%;
-  margin-top: var(--space-3);
+  margin-top: var(--space-2);
+  font-size: 14px;
 }
 
 .btn-secondary:hover {
@@ -631,6 +695,26 @@ body {
     padding: 6px 10px;
   }
   
+  /* 언어 선택기 인라인 - 모바일 */
+  .language-selector-inline {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--space-2);
+  }
+  
+  .language-selector-inline .language-option {
+    padding: 4px 8px;
+  }
+  
+  .language-selector-inline .lang-flag {
+    font-size: 16px;
+  }
+  
+  .language-selector-inline .lang-name {
+    font-size: 11px;
+  }
+  
   /* 언어 드롭다운 - 모바일 */
   .language-trigger {
     padding: 6px 12px;
@@ -692,7 +776,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
