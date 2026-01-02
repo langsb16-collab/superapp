@@ -113,37 +113,141 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* 언어 선택 */
-.language-selector {
-  display: flex;
-  gap: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px;
-  border-radius: 20px;
+/* 언어 드롭다운 */
+.language-dropdown {
+  position: relative;
 }
 
-.lang-btn {
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all 0.2s ease;
+.language-trigger {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-.lang-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
+.language-trigger:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
 }
 
-.lang-btn.active {
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+.language-trigger i.fa-globe {
+  font-size: 18px;
+}
+
+.language-trigger i.fa-chevron-down {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.language-trigger.active i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  min-width: 320px;
+  z-index: 1000;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.language-menu:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-menu-header {
+  padding: var(--space-4);
+  background: var(--gradient);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: var(--space-2);
+  gap: var(--space-2);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 48px;
+}
+
+.language-option:hover {
+  border-color: var(--primary);
+  background: rgba(102, 126, 234, 0.05);
+  transform: translateX(2px);
+}
+
+.language-option.active {
+  border-color: var(--primary);
+  background: rgba(102, 126, 234, 0.1);
+  position: relative;
+}
+
+.language-option.active::after {
+  content: "✓";
+  position: absolute;
+  right: var(--space-2);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.lang-flag {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.lang-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+  flex: 1;
+  text-align: left;
+}
+
+.language-option:hover .lang-name {
+  color: var(--primary);
+}
+
+.language-option.active .lang-name {
+  color: var(--primary);
 }
 
 /* ==================== Hero 섹션 ==================== */
@@ -519,6 +623,38 @@ body {
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
+    gap: var(--space-3);
+  }
+  
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  /* 언어 드롭다운 - 모바일 */
+  .language-trigger {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .language-menu {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    max-height: 70vh;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    transform: translateY(100%);
+  }
+  
+  .language-menu:not(.hidden) {
+    transform: translateY(0);
+  }
+  
+  .language-grid {
+    max-height: calc(70vh - 60px);
   }
   
   /* Hero */
