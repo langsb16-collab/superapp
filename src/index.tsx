@@ -45,7 +45,7 @@ app.get('/', (c) => {
           <h1 data-i18n="appTitle">K-Resident One</h1>
           <p data-i18n="appSubtitle">한국 생활의 모든 것을 하나로</p>
           <p data-i18n="description">외국인을 위한 세무·비자·의료·노동 통합 플랫폼</p>
-          <button className="btn-primary" data-i18n="btnGetStarted" onclick="document.getElementById('chatbotIcon').click()">시작하기</button>
+          <button id="btn-start" className="btn-primary" data-i18n="btnStart">시작하기</button>
         </div>
       </section>
 

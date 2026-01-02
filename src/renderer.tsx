@@ -24,6 +24,7 @@ export const renderer = jsxRenderer(({ children }) => {
         {/* JavaScript */}
         <script src="/static/i18n.js"></script>
         <script src="/static/chatbot-qa.js"></script>
+        <script src="/static/onboarding.js"></script>
       </body>
     </html>
   )
