@@ -112,6 +112,13 @@
       saveLang(currentLang);
       render(currentLang);
 
+      // 언어 변경 이벤트 발송 (챗봇, 온보딩 동기화)
+      document.dispatchEvent(
+        new CustomEvent('i18n:changed', { 
+          detail: { lang: currentLang } 
+        })
+      );
+
       console.info('[i18n] language applied:', currentLang);
     } finally {
       switching = false;

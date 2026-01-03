@@ -138,12 +138,19 @@ window.chatbotQA = {
   ]
 };
 
-// 챗봇 렌더링 함수
+// 챗봇 렌더링 함수 (i18n 연동)
 window.renderChatbot = function() {
-  const lang = window.currentLang || localStorage.getItem('selectedLang') || 'ko';
+  // i18n 시스템에서 현재 언어 가져오기
+  const lang = (window.i18n && window.i18n.lang) || window.currentLang || localStorage.getItem('lang') || 'ko';
   const qaList = window.chatbotQA[lang] || window.chatbotQA['ko'];
   const container = document.getElementById('chatbotQuestions');
-  if (!container) return;
+  
+  if (!container) {
+    console.warn('[chatbot] container not found, retrying...');
+    return;
+  }
+  
+  console.log('[chatbot] rendering with language:', lang);
   
   container.innerHTML = '';
   qaList.forEach((item, index) => {
@@ -160,6 +167,8 @@ window.renderChatbot = function() {
     `;
     container.appendChild(faqItem);
   });
+  
+  console.log('[chatbot] rendered', qaList.length, 'questions');
 };
 
 // FAQ 토글 함수
@@ -192,3 +201,14 @@ if (document.readyState === 'loading') {
 } else {
   window.renderChatbot();
 }
+
+// 언어 변경 시 챗봇 자동 재렌더링 (i18n:changed 이벤트 구독)
+document.addEventListener('i18n:changed', (e) => {
+  const lang = e.detail.lang;
+  console.log('[chatbot] language changed to:', lang, '- re-rendering...');
+  
+  // 100ms 지연 후 재렌더링 (i18n 적용 완료 보장)
+  setTimeout(() => {
+    window.renderChatbot();
+  }, 100);
+});

@@ -1567,3 +1567,147 @@ body {
     margin: 0 auto;
   }
 }
+
+/* ============================================
+   깔끔한 정보 모달 스타일
+   ============================================ */
+.info-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-modal .modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.info-modal .modal-content {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-modal .modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.info-modal .modal-close:hover {
+  color: #333;
+}
+
+.info-modal .modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 20px 0;
+}
+
+.info-modal .modal-body {
+  color: #333;
+  line-height: 1.6;
+}
+
+.info-modal .service-detail h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 16px 0 8px 0;
+}
+
+.info-modal .service-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.info-modal .service-detail li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.info-modal .service-detail li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.info-modal .modal-btn-ok {
+  width: 100%;
+  padding: 14px;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-modal .modal-btn-ok:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.info-modal .modal-btn-ok:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .info-modal .modal-content {
+    padding: 24px;
+    max-width: 95%;
+  }
+  
+  .info-modal .modal-title {
+    font-size: 20px;
+  }
+}
