@@ -35,12 +35,12 @@ export const renderer = jsxRenderer(({ children }) => {
           </div>
         </div>
         
-        {/* JavaScript - 신규 구조 v=7 */}
-        <script src="/static/i18n.js?v=7"></script>
-        <script src="/static/modal.js?v=7"></script>
-        <script src="/static/chatbot-qa.js?v=7"></script>
-        <script src="/static/onboarding.js?v=7"></script>
-        <script src="/static/main.js?v=7"></script>
+        {/* JavaScript - 서비스 상세 콘텐츠 v=8 */}
+        <script src="/static/i18n.js?v=8"></script>
+        <script src="/static/modal.js?v=8"></script>
+        <script src="/static/chatbot-qa.js?v=8"></script>
+        <script src="/static/onboarding.js?v=8"></script>
+        <script src="/static/main.js?v=8"></script>
       </body>
     </html>
   )
