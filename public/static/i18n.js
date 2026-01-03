@@ -657,19 +657,39 @@ window.currentLang = localStorage.getItem('selectedLang') || 'ko';
 
 // 언어 변경 함수
 window.changeLang = function(lang) {
+  console.log('Changing language to:', lang);
   window.currentLang = lang;
   localStorage.setItem('selectedLang', lang);
+  
+  // 번역 확인
+  if (!window.translations[lang]) {
+    console.error('Translation not found for:', lang);
+    console.log('Available languages:', Object.keys(window.translations));
+    return;
+  }
+  
+  console.log('Translation found, updating UI...');
   updateUI();
   
   // 챗봇 언어도 업데이트
   if (window.renderChatbot) {
     window.renderChatbot();
   }
+  
+  console.log('Language changed successfully to:', lang);
 };
 
 // UI 업데이트 함수
 function updateUI() {
   const t = window.translations[window.currentLang];
+  
+  // 번역 객체가 없으면 한국어로 fallback
+  if (!t) {
+    console.warn(`Translation not found for language: ${window.currentLang}, falling back to Korean`);
+    window.currentLang = 'ko';
+    updateUI();
+    return;
+  }
   
   // 데이터 속성을 가진 모든 요소 업데이트
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -694,6 +714,11 @@ function updateUI() {
       btn.classList.add('active');
     }
   });
+  
+  // 드롭다운 트리거 텍스트 업데이트
+  if (window.updateLanguageTrigger) {
+    window.updateLanguageTrigger();
+  }
 }
 
 // DOM 로드 완료 후 초기화
