@@ -417,7 +417,8 @@ window.translations = {
     
     btnLearnMore: "了解更多",
     btnGetStarted: "开始使用",
-    btnChat: "立即咨询"
+    btnChat: "立即咨询",
+    btnStart: "开始使用"
   },
   
   "zh-TW": {
@@ -462,7 +463,8 @@ window.translations = {
     
     btnLearnMore: "了解更多",
     btnGetStarted: "開始使用",
-    btnChat: "立即諮詢"
+    btnChat: "立即諮詢",
+    btnStart: "開始使用"
   },
   
   ja: {
@@ -507,7 +509,8 @@ window.translations = {
     
     btnLearnMore: "詳しく見る",
     btnGetStarted: "始める",
-    btnChat: "相談する"
+    btnChat: "相談する",
+    btnStart: "始める"
   },
   
   vi: {
@@ -552,7 +555,8 @@ window.translations = {
     
     btnLearnMore: "Tìm hiểu thêm",
     btnGetStarted: "Bắt đầu",
-    btnChat: "Trò chuyện ngay"
+    btnChat: "Trò chuyện ngay",
+    btnStart: "Bắt đầu"
   },
   
   es: {
@@ -597,7 +601,8 @@ window.translations = {
     
     btnLearnMore: "Saber más",
     btnGetStarted: "Comenzar",
-    btnChat: "Chatear ahora"
+    btnChat: "Chatear ahora",
+    btnStart: "Comenzar"
   },
   
   de: {
@@ -642,7 +647,8 @@ window.translations = {
     
     btnLearnMore: "Mehr erfahren",
     btnGetStarted: "Loslegen",
-    btnChat: "Jetzt chatten"
+    btnChat: "Jetzt chatten",
+    btnStart: "Loslegen"
   }
 };
 
