@@ -100,7 +100,8 @@
     "btnNext": "다음",
     "btnPrev": "이전",
     "btnSubmit": "신청하기",
-    "btnConfirm": "확인"
+    "btnConfirm": "확인",
+    "serviceSectionTitle": "4대 핵심 서비스"
   },
   "en": {
     "appTitle": "K-Resident One",
@@ -203,7 +204,8 @@
     "btnNext": "Next",
     "btnPrev": "Previous",
     "btnSubmit": "Submit",
-    "btnConfirm": "Confirm"
+    "btnConfirm": "Confirm",
+    "serviceSectionTitle": "4 Core Services"
   },
   "zh-CN": {
     "appTitle": "K-Resident One",
@@ -287,7 +289,8 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One 是一个韩国生活综合平台，\n帮助外国人减少不便，支持自愿纳税、合法居留和稳定就业。"
+    "serviceMessage": "K-Resident One 是一个韩国生活综合平台，\n帮助外国人减少不便，支持自愿纳税、合法居留和稳定就业。",
+    "serviceSectionTitle": "4大核心服务"
   },
   "zh-TW": {
     "appTitle": "K-Resident One",
@@ -371,7 +374,8 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One 是一個韓國生活綜合平台，\n幫助外國人減少不便，支持自願納稅、合法居留和穩定就業。"
+    "serviceMessage": "K-Resident One 是一個韓國生活綜合平台，\n幫助外國人減少不便，支持自願納稅、合法居留和穩定就業。",
+    "serviceSectionTitle": "4大核心服務"
   },
   "ja": {
     "appTitle": "K-Resident One",
@@ -455,7 +459,8 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident Oneは外国人の不便を減らし、\n自発的な納税と合法的な滞在、安定した労働を支援する韓国生活統合プラットフォームです。"
+    "serviceMessage": "K-Resident Oneは外国人の不便を減らし、\n自発的な納税と合法的な滞在、安定した労働を支援する韓国生活統合プラットフォームです。",
+    "serviceSectionTitle": "4つのコアサービス"
   },
   "vi": {
     "appTitle": "K-Resident One",
@@ -539,7 +544,8 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One là nền tảng tích hợp cuộc sống Hàn Quốc\ngiúp người nước ngoài giảm bất tiện và hỗ trợ nộp thuế tự nguyện, cư trú hợp pháp và việc làm ổn định."
+    "serviceMessage": "K-Resident One là nền tảng tích hợp cuộc sống Hàn Quốc\ngiúp người nước ngoài giảm bất tiện và hỗ trợ nộp thuế tự nguyện, cư trú hợp pháp và việc làm ổn định.",
+    "serviceSectionTitle": "4 Dịch Vụ Cốt Lõi"
   },
   "es": {
     "appTitle": "K-Resident One",
@@ -623,7 +629,8 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One es una plataforma integrada para la vida en Corea\nque ayuda a los extranjeros a reducir inconvenientes y apoya el pago voluntario de impuestos, residencia legal y empleo estable."
+    "serviceMessage": "K-Resident One es una plataforma integrada para la vida en Corea\nque ayuda a los extranjeros a reducir inconvenientes y apoya el pago voluntario de impuestos, residencia legal y empleo estable.",
+    "serviceSectionTitle": "4 Servicios Básicos"
   },
   "de": {
     "appTitle": "K-Resident One",
@@ -707,6 +714,7 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One ist eine integrierte Plattform für das Leben in Korea,\ndie Ausländern hilft, Unannehmlichkeiten zu reduzieren und freiwillige Steuerzahlung, legalen Aufenthalt und stabile Beschäftigung unterstützt."
+    "serviceMessage": "K-Resident One ist eine integrierte Plattform für das Leben in Korea,\ndie Ausländern hilft, Unannehmlichkeiten zu reduzieren und freiwillige Steuerzahlung, legalen Aufenthalt und stabile Beschäftigung unterstützt.",
+    "serviceSectionTitle": "4 Kerndienstleistungen"
   }
 }
