@@ -33,7 +33,14 @@
     "chatbotWelcome": "안녕하세요! 👋\n저는 K-Resident 케어봇입니다.\n무엇을 도와드릴까요?",
     "chatbotPlaceholder": "메시지를 입력하세요...",
     "btnLearnMore": "자세히 보기",
-    "btnStart": "시작하기"
+    "btnStart": "시작하기",
+    "onboarding.start.1": "환영합니다. K-Resident One 사용을 시작합니다.",
+    "onboarding.start.2": "원하는 서비스를 선택해 진행할 수 있습니다.",
+    "onboarding.tax.1": "세무 & 환급 서비스를 시작합니다.",
+    "onboarding.tax.2": "연말정산 및 종합소득세 환급을 도와드립니다.",
+    "onboarding.visa.1": "비자 & 체류관리 서비스를 시작합니다.",
+    "onboarding.medical.1": "의료 지원 서비스를 시작합니다.",
+    "onboarding.labor.1": "노동 및 권리보호 서비스를 시작합니다."
   },
   "en": {
     "appTitle": "K-Resident One",
@@ -69,7 +76,14 @@
     "chatbotWelcome": "Hello! 👋\nI'm K-Resident Care Bot.\nHow can I help you?",
     "chatbotPlaceholder": "Type a message...",
     "btnLearnMore": "Learn More",
-    "btnStart": "Get Started"
+    "btnStart": "Get Started",
+    "onboarding.start.1": "Welcome. Let's get started with K-Resident One.",
+    "onboarding.start.2": "Select a service to continue.",
+    "onboarding.tax.1": "Starting Tax & Refund service.",
+    "onboarding.tax.2": "We'll help you with year-end tax filing and refunds.",
+    "onboarding.visa.1": "Starting Visa & Residency Management service.",
+    "onboarding.medical.1": "Starting Medical Support service.",
+    "onboarding.labor.1": "Starting Labor & Rights Protection service."
   },
   "zh-CN": {
     "appTitle": "K-Resident One",
@@ -105,7 +119,14 @@
     "chatbotWelcome": "您好！👋\n我是K-Resident关怀机器人。\n我能帮您什么？",
     "chatbotPlaceholder": "输入消息...",
     "btnLearnMore": "了解更多",
-    "btnStart": "开始使用"
+    "btnStart": "开始使用",
+    "onboarding.start.1": "欢迎使用 K-Resident One，现在开始。",
+    "onboarding.start.2": "请选择服务继续。",
+    "onboarding.tax.1": "开始税务与退税服务。",
+    "onboarding.tax.2": "我们将帮助您进行年度申报和退税。",
+    "onboarding.visa.1": "开始签证与居留管理服务。",
+    "onboarding.medical.1": "开始医疗支持服务。",
+    "onboarding.labor.1": "开始劳动与权益保护服务。"
   },
   "zh-TW": {
     "appTitle": "K-Resident One",
@@ -141,7 +162,14 @@
     "chatbotWelcome": "您好！👋\n我是K-Resident關懷機器人。\n我能幫您什麼？",
     "chatbotPlaceholder": "輸入訊息...",
     "btnLearnMore": "了解更多",
-    "btnStart": "開始使用"
+    "btnStart": "開始使用",
+    "onboarding.start.1": "歡迎使用 K-Resident One，現在開始。",
+    "onboarding.start.2": "請選擇服務繼續。",
+    "onboarding.tax.1": "開始稅務與退稅服務。",
+    "onboarding.tax.2": "我們將幫助您進行年度申報和退稅。",
+    "onboarding.visa.1": "開始簽證與居留管理服務。",
+    "onboarding.medical.1": "開始醫療支援服務。",
+    "onboarding.labor.1": "開始勞動與權益保護服務。"
   },
   "ja": {
     "appTitle": "K-Resident One",
@@ -177,7 +205,14 @@
     "chatbotWelcome": "こんにちは！👋\n私はK-Residentケアボットです。\n何かお手伝いしましょうか？",
     "chatbotPlaceholder": "メッセージを入力してください...",
     "btnLearnMore": "詳しく見る",
-    "btnStart": "始める"
+    "btnStart": "始める",
+    "onboarding.start.1": "K-Resident Oneへようこそ。開始します。",
+    "onboarding.start.2": "サービスを選択して続行してください。",
+    "onboarding.tax.1": "税務・還付サービスを開始します。",
+    "onboarding.tax.2": "年末調整と所得税還付をお手伝いします。",
+    "onboarding.visa.1": "ビザ・滞在管理サービスを開始します。",
+    "onboarding.medical.1": "医療支援サービスを開始します。",
+    "onboarding.labor.1": "労働・権利保護サービスを開始します。"
   },
   "vi": {
     "appTitle": "K-Resident One",
@@ -213,7 +248,14 @@
     "chatbotWelcome": "Xin chào! 👋\nTôi là K-Resident Care Bot.\nTôi có thể giúp gì cho bạn?",
     "chatbotPlaceholder": "Nhập tin nhắn...",
     "btnLearnMore": "Tìm hiểu thêm",
-    "btnStart": "Bắt đầu"
+    "btnStart": "Bắt đầu",
+    "onboarding.start.1": "Chào mừng. Bắt đầu với K-Resident One.",
+    "onboarding.start.2": "Chọn dịch vụ để tiếp tục.",
+    "onboarding.tax.1": "Bắt đầu dịch vụ Thuế & Hoàn thuế.",
+    "onboarding.tax.2": "Chúng tôi sẽ giúp bạn quyết toán thuế cuối năm và hoàn thuế.",
+    "onboarding.visa.1": "Bắt đầu dịch vụ Quản lý Visa & Cư trú.",
+    "onboarding.medical.1": "Bắt đầu dịch vụ Hỗ trợ Y tế.",
+    "onboarding.labor.1": "Bắt đầu dịch vụ Bảo vệ Lao động & Quyền lợi."
   },
   "es": {
     "appTitle": "K-Resident One",
@@ -249,7 +291,14 @@
     "chatbotWelcome": "¡Hola! 👋\nSoy K-Resident Care Bot.\n¿En qué puedo ayudarte?",
     "chatbotPlaceholder": "Escribe un mensaje...",
     "btnLearnMore": "Saber más",
-    "btnStart": "Comenzar"
+    "btnStart": "Comenzar",
+    "onboarding.start.1": "Bienvenido. Comencemos con K-Resident One.",
+    "onboarding.start.2": "Seleccione un servicio para continuar.",
+    "onboarding.tax.1": "Iniciando servicio de Impuestos y Reembolsos.",
+    "onboarding.tax.2": "Le ayudaremos con la declaración de impuestos de fin de año y reembolsos.",
+    "onboarding.visa.1": "Iniciando servicio de Gestión de Visa y Residencia.",
+    "onboarding.medical.1": "Iniciando servicio de Soporte Médico.",
+    "onboarding.labor.1": "Iniciando servicio de Protección Laboral y Derechos."
   },
   "de": {
     "appTitle": "K-Resident One",
@@ -285,6 +334,13 @@
     "chatbotWelcome": "Hallo! 👋\nIch bin K-Resident Care Bot.\nWie kann ich Ihnen helfen?",
     "chatbotPlaceholder": "Nachricht eingeben...",
     "btnLearnMore": "Mehr erfahren",
-    "btnStart": "Loslegen"
+    "btnStart": "Loslegen",
+    "onboarding.start.1": "Willkommen. Beginnen wir mit K-Resident One.",
+    "onboarding.start.2": "Wählen Sie einen Service, um fortzufahren.",
+    "onboarding.tax.1": "Starten des Steuer- und Rückerstattungsservice.",
+    "onboarding.tax.2": "Wir helfen Ihnen bei der Jahressteuererklärung und Rückerstattung.",
+    "onboarding.visa.1": "Starten des Visa- und Aufenthaltsverwaltungsservice.",
+    "onboarding.medical.1": "Starten des medizinischen Unterstützungsservice.",
+    "onboarding.labor.1": "Starten des Arbeits- und Rechtsschutzservice."
   }
 }

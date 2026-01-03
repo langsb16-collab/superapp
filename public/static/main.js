@@ -37,10 +37,8 @@
   }
 
   /* -----------------------------
-     시작하기 버튼 (이벤트 위임 + Lock)
+     시작하기 버튼 (이벤트 위임)
   ----------------------------- */
-  let onboardingLock = false;
-
   function initStartButton() {
     document.addEventListener('click', (e) => {
       const btn = e.target.closest('#btn-start');
@@ -48,33 +46,21 @@
 
       e.preventDefault();
 
-      // 중복 실행 방지
-      if (onboardingLock) {
-        console.warn('[main.js] onboarding already running');
-        return;
-      }
-
       console.log('[main.js] start button clicked');
 
-      // 온보딩 시작
-      if (window.onboarding && typeof window.onboarding.start === 'function') {
-        onboardingLock = true;
+      // 새로운 OnboardingFlow 사용
+      if (window.OnboardingFlow && typeof window.OnboardingFlow.start === 'function') {
+        const service = btn.dataset.service || 'start';
         
         try {
-          window.onboarding.start();
-          console.log('[main.js] onboarding started');
+          window.OnboardingFlow.start(service);
+          console.log('[main.js] onboarding started:', service);
         } catch (err) {
           console.error('[main.js] onboarding start error:', err);
           showModal('오류', '온보딩을 시작할 수 없습니다. 페이지를 새로고침해주세요.');
-          onboardingLock = false;
         }
-        
-        // 300ms 후 Lock 해제
-        setTimeout(() => {
-          onboardingLock = false;
-        }, 300);
       } else {
-        console.error('[main.js] onboarding not found');
+        console.error('[main.js] OnboardingFlow not found');
         showModal('알림', '온보딩 시스템을 로드 중입니다. 잠시 후 다시 시도해주세요.');
       }
     });
@@ -329,9 +315,10 @@
     }
 
     // 온보딩 리셋 (열려있다면)
-    if (window.onboarding && typeof window.onboarding.close === 'function') {
-      window.onboarding.close();
-      console.log('[main.js] onboarding closed on language change');
+    if (window.OnboardingFlow && typeof window.OnboardingFlow.reset === 'function') {
+      window.OnboardingFlow.reset();
+      window.closeModal?.();
+      console.log('[main.js] onboarding reset on language change');
     }
 
     // 챗봇 재렌더링

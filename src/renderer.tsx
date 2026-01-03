@@ -21,11 +21,26 @@ export const renderer = jsxRenderer(({ children }) => {
       <body>
         {children}
         
-        {/* JavaScript - 통합 버전 v=6 */}
-        <script src="/static/i18n.js?v=6"></script>
-        <script src="/static/chatbot-qa.js?v=6"></script>
-        <script src="/static/onboarding.js?v=6"></script>
-        <script src="/static/main.js?v=6"></script>
+        {/* Common Modal HTML */}
+        <div id="commonModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-top">
+              <div class="modal-progress">1 / 1</div>
+              <button class="modal-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-actions">
+              <button class="modal-next">다음</button>
+            </div>
+          </div>
+        </div>
+        
+        {/* JavaScript - 신규 구조 v=7 */}
+        <script src="/static/i18n.js?v=7"></script>
+        <script src="/static/modal.js?v=7"></script>
+        <script src="/static/chatbot-qa.js?v=7"></script>
+        <script src="/static/onboarding.js?v=7"></script>
+        <script src="/static/main.js?v=7"></script>
       </body>
     </html>
   )
