@@ -138,10 +138,10 @@ window.chatbotQA = {
   ]
 };
 
-// 챗봇 렌더링 함수 (i18n 연동)
-window.renderChatbot = function() {
-  // i18n 시스템에서 현재 언어 가져오기
-  const lang = (window.i18n && window.i18n.lang) || window.currentLang || localStorage.getItem('lang') || 'ko';
+// 챗봇 렌더링 함수 (i18n 연동 + 명시적 언어 파라미터)
+window.renderChatbot = function(explicitLang) {
+  // ✅ 명시적 언어 우선, 없으면 i18n에서 가져오기
+  const lang = explicitLang || (window.i18n && window.i18n.lang) || window.currentLang || localStorage.getItem('lang') || 'ko';
   const qaList = window.chatbotQA[lang] || window.chatbotQA['ko'];
   const container = document.getElementById('chatbotQuestions');
   
@@ -150,7 +150,7 @@ window.renderChatbot = function() {
     return;
   }
   
-  console.log('[chatbot] rendering with language:', lang);
+  console.log('[chatbot] rendering with explicit language:', lang);
   
   container.innerHTML = '';
   qaList.forEach((item, index) => {
@@ -168,7 +168,7 @@ window.renderChatbot = function() {
     container.appendChild(faqItem);
   });
   
-  console.log('[chatbot] rendered', qaList.length, 'questions');
+  console.log('[chatbot] rendered', qaList.length, 'questions in', lang);
 };
 
 // FAQ 토글 함수
@@ -202,13 +202,13 @@ if (document.readyState === 'loading') {
   window.renderChatbot();
 }
 
-// 언어 변경 시 챗봇 자동 재렌더링 (i18n:changed 이벤트 구독)
+// 언어 변경 시 챗봇 자동 재렌더링 (i18n:changed 이벤트 구독 + 명시적 언어)
 document.addEventListener('i18n:changed', (e) => {
   const lang = e.detail.lang;
-  console.log('[chatbot] language changed to:', lang, '- re-rendering...');
+  console.log('[chatbot] language changed to:', lang, '- re-rendering with explicit lang...');
   
-  // 100ms 지연 후 재렌더링 (i18n 적용 완료 보장)
+  // 100ms 지연 후 명시적 언어로 재렌더링 (i18n 적용 완료 보장)
   setTimeout(() => {
-    window.renderChatbot();
+    window.renderChatbot(lang);  // ✅ 명시적 언어 파라미터 전달
   }, 100);
 });

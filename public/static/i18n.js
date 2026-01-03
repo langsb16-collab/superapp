@@ -171,6 +171,8 @@
     
     const lang = btn.dataset.lang;
     console.log('[i18n] language button clicked:', lang);
+    
+    // ✅ 단일 API 사용
     applyLanguage(lang);
     
     // 드롭다운 닫기
@@ -214,16 +216,27 @@
   }
 
   /* -----------------------------
-     외부 노출 (필요 최소)
+     외부 노출 (필요 최소 + 단일 진실원칙)
   ----------------------------- */
   window.i18n = {
-    apply: applyLanguage,
+    // ✅ 언어 변경은 이 함수로만 가능 (Single Source of Truth)
+    setLanguage: applyLanguage,
+    
+    // ✅ 번역 함수
     t: (key) => t(currentLang, key),
+    
+    // ✅ 현재 언어 (읽기 전용)
     get lang() {
       return currentLang;
     },
+    
+    // ✅ 준비 상태 (읽기 전용)
     get ready() {
       return ready;
     }
   };
+
+  // ❌ 외부에서 직접 변경 금지
+  // window.currentLang = 'en';  // 이렇게 하면 안됨!
+  // window.i18n.setLanguage('en');  // ✅ 이렇게만 사용
 })();

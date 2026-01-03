@@ -1711,3 +1711,23 @@ body {
     font-size: 20px;
   }
 }
+
+/* ============================================
+   모달 포커스 트랩 - 배경 스크롤 차단
+   ============================================ */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+body.modal-open .info-modal {
+  z-index: 10000;
+}
+
+/* 모바일에서 배경 터치 차단 */
+@media (max-width: 768px) {
+  body.modal-open {
+    touch-action: none;
+  }
+}

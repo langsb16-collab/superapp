@@ -83,12 +83,15 @@
   }
 
   /* -----------------------------
-     깔끔한 모달 시스템
+     깔끔한 모달 시스템 (+ 포커스 트랩)
   ----------------------------- */
   function showModal(title, content) {
     // 기존 모달 제거
     const existing = document.getElementById('info-modal');
     if (existing) existing.remove();
+
+    // 배경 스크롤 차단
+    document.body.classList.add('modal-open');
 
     // 모달 생성
     const modal = document.createElement('div');
@@ -106,11 +109,25 @@
 
     document.body.appendChild(modal);
 
-    // 닫기 이벤트
-    const close = () => modal.remove();
+    // 닫기 이벤트 + 배경 스크롤 복원
+    const close = () => {
+      modal.remove();
+      document.body.classList.remove('modal-open');
+      console.log('[main.js] modal closed');
+    };
+    
     modal.querySelector('.modal-close').addEventListener('click', close);
     modal.querySelector('.modal-btn-ok').addEventListener('click', close);
     modal.querySelector('.modal-backdrop').addEventListener('click', close);
+
+    // ESC 키로 닫기
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        close();
+        document.removeEventListener('keydown', handleEsc);
+      }
+    };
+    document.addEventListener('keydown', handleEsc);
 
     console.log('[main.js] modal shown:', title);
   }
