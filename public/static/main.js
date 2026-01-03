@@ -5,6 +5,16 @@
 
 console.log('=== K-Resident One Main.js Loading ===');
 
+// translations가 로드될 때까지 기다림
+function waitForTranslations(callback) {
+  if (typeof window.translations !== 'undefined') {
+    callback();
+  } else {
+    console.log('Waiting for translations...');
+    setTimeout(() => waitForTranslations(callback), 100);
+  }
+}
+
 // 전역 변수 초기화
 window.kResident = {
   currentLang: localStorage.getItem('selectedLang') || 'ko',
@@ -277,9 +287,11 @@ function initialize() {
 
 // DOM 로드 완료 후 초기화
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initialize);
+  document.addEventListener('DOMContentLoaded', () => {
+    waitForTranslations(initialize);
+  });
 } else {
-  initialize();
+  waitForTranslations(initialize);
 }
 
 // 전역으로 노출 (디버깅용)
