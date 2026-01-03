@@ -1993,6 +1993,7 @@ body.modal-open {
   color: #1e3a8a;
   font-weight: 500;
   margin: 0;
+  white-space: pre-line;
 }
 
 /* 모바일 반응형 */

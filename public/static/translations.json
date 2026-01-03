@@ -81,7 +81,7 @@
     "laborTrust": "외국인 노동자의 권리 보호를 강화하고, 분쟁 발생 전·후 증거와 절차를 체계적으로 관리합니다.",
     "laborCTA1": "계약서 업로드 & 분석",
     "laborCTA2": "임금 계산하기",
-    "serviceMessage": "K-Resident One은 외국인의 불편을 줄여 자발적 납세와 합법적 체류, 안정적인 근로를 돕는 한국 생활 통합 플랫폼입니다."
+    "serviceMessage": "K-Resident One은 외국인의 불편을 줄여 자발적 납세와 합법적 체류,\n안정적인 근로를 돕는 한국 생활 통합 플랫폼입니다."
   },
   "en": {
     "appTitle": "K-Resident One",
@@ -165,7 +165,7 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One reduces inconveniences for foreigners, promoting voluntary tax compliance, legal residency, and stable employment in Korea."
+    "serviceMessage": "K-Resident One is an integrated platform for Korean life\nthat helps foreigners reduce inconvenience and supports voluntary tax payment, legal residence, and stable employment."
   },
   "zh-CN": {
     "appTitle": "K-Resident One",
@@ -249,7 +249,7 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One reduces inconveniences for foreigners, promoting voluntary tax compliance, legal residency, and stable employment in Korea."
+    "serviceMessage": "K-Resident One 是一个韩国生活综合平台，\n帮助外国人减少不便，支持自愿纳税、合法居留和稳定就业。"
   },
   "zh-TW": {
     "appTitle": "K-Resident One",
@@ -333,7 +333,7 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One reduces inconveniences for foreigners, promoting voluntary tax compliance, legal residency, and stable employment in Korea."
+    "serviceMessage": "K-Resident One 是一個韓國生活綜合平台，\n幫助外國人減少不便，支持自願納稅、合法居留和穩定就業。"
   },
   "ja": {
     "appTitle": "K-Resident One",
@@ -417,7 +417,7 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One reduces inconveniences for foreigners, promoting voluntary tax compliance, legal residency, and stable employment in Korea."
+    "serviceMessage": "K-Resident Oneは外国人の不便を減らし、\n自発的な納税と合法的な滞在、安定した労働を支援する韓国生活統合プラットフォームです。"
   },
   "vi": {
     "appTitle": "K-Resident One",
@@ -501,7 +501,7 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One reduces inconveniences for foreigners, promoting voluntary tax compliance, legal residency, and stable employment in Korea."
+    "serviceMessage": "K-Resident One là nền tảng tích hợp cuộc sống Hàn Quốc\ngiúp người nước ngoài giảm bất tiện và hỗ trợ nộp thuế tự nguyện, cư trú hợp pháp và việc làm ổn định."
   },
   "es": {
     "appTitle": "K-Resident One",
@@ -585,7 +585,7 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One reduces inconveniences for foreigners, promoting voluntary tax compliance, legal residency, and stable employment in Korea."
+    "serviceMessage": "K-Resident One es una plataforma integrada para la vida en Corea\nque ayuda a los extranjeros a reducir inconvenientes y apoya el pago voluntario de impuestos, residencia legal y empleo estable."
   },
   "de": {
     "appTitle": "K-Resident One",
@@ -669,6 +669,6 @@
     "laborTrust": "Strengthen foreign worker rights protection. Systematically manage evidence and procedures before/after disputes.",
     "laborCTA1": "Upload & Analyze Contract",
     "laborCTA2": "Calculate Wages",
-    "serviceMessage": "K-Resident One reduces inconveniences for foreigners, promoting voluntary tax compliance, legal residency, and stable employment in Korea."
+    "serviceMessage": "K-Resident One ist eine integrierte Plattform für das Leben in Korea,\ndie Ausländern hilft, Unannehmlichkeiten zu reduzieren und freiwillige Steuerzahlung, legalen Aufenthalt und stabile Beschäftigung unterstützt."
   }
 }
