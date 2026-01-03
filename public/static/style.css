@@ -2055,3 +2055,54 @@ html {
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* ======================================================
+   Section Navigation (v=8)
+   ====================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.service-card.active-section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 로고 호버 효과 */
+.logo {
+  transition: all 0.3s;
+}
+
+.logo:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+/* 네비게이션 활성 상태 */
+.nav-link.active {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}

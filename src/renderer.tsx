@@ -35,9 +35,10 @@ export const renderer = jsxRenderer(({ children }) => {
           </div>
         </div>
         
-        {/* JavaScript - 서비스 상세 콘텐츠 v=8 */}
+        {/* JavaScript - 섹션 네비게이션 v=8 */}
         <script src="/static/i18n.js?v=8"></script>
         <script src="/static/modal.js?v=8"></script>
+        <script src="/static/sections.js?v=8"></script>
         <script src="/static/chatbot-qa.js?v=8"></script>
         <script src="/static/onboarding.js?v=8"></script>
         <script src="/static/main.js?v=8"></script>
