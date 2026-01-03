@@ -32,42 +32,42 @@ app.get('/', (c) => {
                 <i className="fas fa-chevron-down"></i>
               </button>
               <div id="language-menu" className="language-menu-compact hidden">
-                <button className="language-option active" data-lang="ko" onclick="window.changeLang('ko')">
+                <button className="language-option active" data-lang="ko">
                   <span className="lang-flag">🇰🇷</span>
                   <span className="lang-name">한국어</span>
                   <span className="lang-check">✓</span>
                 </button>
-                <button className="language-option" data-lang="en" onclick="window.changeLang('en')">
+                <button className="language-option" data-lang="en">
                   <span className="lang-flag">🇺🇸</span>
                   <span className="lang-name">English</span>
                   <span className="lang-check">✓</span>
                 </button>
-                <button className="language-option" data-lang="zh-CN" onclick="window.changeLang('zh-CN')">
+                <button className="language-option" data-lang="zh-CN">
                   <span className="lang-flag">🇨🇳</span>
                   <span className="lang-name">中文(简)</span>
                   <span className="lang-check">✓</span>
                 </button>
-                <button className="language-option" data-lang="zh-TW" onclick="window.changeLang('zh-TW')">
+                <button className="language-option" data-lang="zh-TW">
                   <span className="lang-flag">🇹🇼</span>
                   <span className="lang-name">中文(繁)</span>
                   <span className="lang-check">✓</span>
                 </button>
-                <button className="language-option" data-lang="ja" onclick="window.changeLang('ja')">
+                <button className="language-option" data-lang="ja">
                   <span className="lang-flag">🇯🇵</span>
                   <span className="lang-name">日本語</span>
                   <span className="lang-check">✓</span>
                 </button>
-                <button className="language-option" data-lang="vi" onclick="window.changeLang('vi')">
+                <button className="language-option" data-lang="vi">
                   <span className="lang-flag">🇻🇳</span>
                   <span className="lang-name">Tiếng Việt</span>
                   <span className="lang-check">✓</span>
                 </button>
-                <button className="language-option" data-lang="es" onclick="window.changeLang('es')">
+                <button className="language-option" data-lang="es">
                   <span className="lang-flag">🇪🇸</span>
                   <span className="lang-name">Español</span>
                   <span className="lang-check">✓</span>
                 </button>
-                <button className="language-option" data-lang="de" onclick="window.changeLang('de')">
+                <button className="language-option" data-lang="de">
                   <span className="lang-flag">🇩🇪</span>
                   <span className="lang-name">Deutsch</span>
                   <span className="lang-check">✓</span>

@@ -56,20 +56,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // 언어 변경 함수 래핑
+  // 모든 언어 옵션 버튼에 클릭 이벤트 추가
+  document.querySelectorAll('.language-option').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lang = button.getAttribute('data-lang');
+      if (lang && window.changeLang) {
+        console.log('Language button clicked:', lang);
+        window.changeLang(lang);
+        
+        // 메뉴 닫기
+        menu.classList.add('hidden');
+        trigger.classList.remove('active');
+      }
+    });
+  });
+
+  // 언어 변경 함수 래핑 (기존 호환성 유지)
   const originalChangeLang = window.changeLang;
-  window.changeLang = function(lang) {
-    if (originalChangeLang) {
+  if (originalChangeLang) {
+    window.changeLang = function(lang) {
+      console.log('changeLang wrapper called with:', lang);
       originalChangeLang(lang);
-    }
-    
-    // 메뉴 닫기
-    menu.classList.add('hidden');
-    trigger.classList.remove('active');
-    
-    // 트리거 텍스트 업데이트
-    window.updateLanguageTrigger();
-  };
+      
+      // 메뉴 닫기
+      menu.classList.add('hidden');
+      trigger.classList.remove('active');
+      
+      // 트리거 텍스트 업데이트
+      window.updateLanguageTrigger();
+    };
+  }
 
   // 초기 언어 설정
   window.updateLanguageTrigger();
