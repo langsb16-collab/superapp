@@ -22,10 +22,11 @@ export const renderer = jsxRenderer(({ children }) => {
         {children}
         
         {/* JavaScript - 캐시 무효화를 위한 버전 파라미터 */}
-        <script src="/static/i18n.js?v=2"></script>
-        <script src="/static/language-dropdown.js?v=2"></script>
-        <script src="/static/chatbot-qa.js?v=2"></script>
-        <script src="/static/onboarding.js?v=2"></script>
+        <script src="/static/i18n.js?v=3"></script>
+        <script src="/static/language-dropdown.js?v=3"></script>
+        <script src="/static/chatbot-qa.js?v=3"></script>
+        <script src="/static/onboarding.js?v=3"></script>
+        <script src="/static/app.js?v=3"></script>
       </body>
     </html>
   )
