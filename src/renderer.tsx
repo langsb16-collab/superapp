@@ -15,8 +15,8 @@ export const renderer = jsxRenderer(({ children }) => {
         {/* Google Fonts */}
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
         
-        {/* Custom CSS - 온보딩 실제 기능 구현 v=11 */}
-        <link href="/static/style.css?v=11" rel="stylesheet" />
+        {/* Custom CSS - 다국어 제목 번역 v=12 */}
+        <link href="/static/style.css?v=12" rel="stylesheet" />
       </head>
       <body>
         {children}
@@ -35,13 +35,13 @@ export const renderer = jsxRenderer(({ children }) => {
           </div>
         </div>
         
-        {/* JavaScript - 온보딩 실제 기능 구현 v=11 */}
-        <script src="/static/i18n.js?v=11"></script>
-        <script src="/static/modal.js?v=11"></script>
-        <script src="/static/sections.js?v=11"></script>
-        <script src="/static/chatbot-qa.js?v=11"></script>
-        <script src="/static/onboarding.js?v=11"></script>
-        <script src="/static/main.js?v=11"></script>
+        {/* JavaScript - 다국어 제목 번역 v=12 */}
+        <script src="/static/i18n.js?v=12"></script>
+        <script src="/static/modal.js?v=12"></script>
+        <script src="/static/sections.js?v=12"></script>
+        <script src="/static/chatbot-qa.js?v=12"></script>
+        <script src="/static/onboarding.js?v=12"></script>
+        <script src="/static/main.js?v=12"></script>
       </body>
     </html>
   )
