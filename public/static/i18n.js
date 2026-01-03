@@ -145,6 +145,12 @@
       const saved = getSavedLang();
       await applyLanguage(saved || 'ko');
 
+      // ✅ 초기 DOM 전체 강제 렌더링 (비어있는 data-i18n 요소 채우기)
+      setTimeout(() => {
+        render(currentLang);
+        console.info('[i18n] initial render completed');
+      }, 100);
+
       // Health Check
       console.table(
         Object.keys(TRANSLATIONS).map(l => ({
@@ -227,6 +233,9 @@
     
     // ✅ 현재 언어 가져오기
     getCurrentLanguage: () => currentLang,
+    
+    // ✅ 수동 렌더링 (디버깅/테스트용)
+    render: (lang) => render(lang || currentLang),
     
     // ✅ 현재 언어 (읽기 전용)
     get lang() {
