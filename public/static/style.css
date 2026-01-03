@@ -414,14 +414,11 @@ body {
 .services {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-8) var(--space-4);
+  padding: var(--space-4) var(--space-4);
 }
 
 .services h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: var(--space-8);
-  color: var(--gray-900);
+  display: none;
 }
 
 .services-grid {
@@ -802,6 +799,10 @@ body {
   }
   
   /* 서비스 그리드 */
+  .services {
+    padding: var(--space-3) var(--space-4);
+  }
+  
   .services-grid {
     grid-template-columns: 1fr;
   }

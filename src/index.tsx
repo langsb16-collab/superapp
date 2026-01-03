@@ -90,7 +90,6 @@ app.get('/', (c) => {
 
       {/* Services Section */}
       <section className="services" id="services">
-        <h2 data-i18n="serviceSectionTitle"></h2>
         <div className="services-grid">
           {/* Tax Service */}
           <div className="service-card" id="tax" data-service="tax">
