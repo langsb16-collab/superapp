@@ -87,16 +87,24 @@ function initLanguageSwitcher() {
 
 function changeLang(lang) {
   console.log('Changing language to:', lang);
+  console.log('Available translations:', Object.keys(window.translations || {}));
   
   window.kResident.currentLang = lang;
   window.currentLang = lang;
   localStorage.setItem('selectedLang', lang);
   
-  const t = window.translations[lang];
+  // 안전하게 번역 객체 접근
+  const translations = window.translations || {};
+  const t = translations[lang] || translations['ko'];
+  
   if (!t) {
     console.error('Translation not found for:', lang);
+    console.error('Translations object:', translations);
+    alert(`번역을 찾을 수 없습니다: ${lang}`);
     return;
   }
+  
+  console.log('Translation found, keys:', Object.keys(t).slice(0, 5));
   
   // UI 업데이트
   document.querySelectorAll('[data-i18n]').forEach(el => {
