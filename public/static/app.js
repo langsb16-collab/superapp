@@ -7,6 +7,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('App.js loaded - initializing event handlers');
   
+  // OnboardingFlow가 로드될 때까지 대기
+  const initOnboarding = () => {
+    if (typeof OnboardingFlow !== 'undefined') {
+      window.onboarding = new OnboardingFlow();
+      console.log('Onboarding initialized');
+    } else {
+      console.log('Waiting for OnboardingFlow...');
+      setTimeout(initOnboarding, 100);
+    }
+  };
+  
+  initOnboarding();
+  
   // 1. 시작하기 버튼 이벤트
   const btnStart = document.getElementById('btn-start');
   if (btnStart) {
@@ -15,14 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Start button clicked');
       
       if (window.onboarding) {
+        console.log('Starting onboarding...');
         window.onboarding.start();
       } else {
-        console.log('Onboarding not loaded, initializing...');
-        window.onboarding = new OnboardingFlow();
-        window.onboarding.start();
+        console.error('Onboarding not initialized yet');
+        alert('시스템을 초기화하는 중입니다. 잠시 후 다시 시도해주세요.');
       }
     });
     console.log('Start button event listener added');
+  } else {
+    console.error('Start button not found');
   }
   
   // 2. 자세히 보기 버튼 이벤트 (모든 섹션)
