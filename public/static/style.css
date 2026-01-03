@@ -2096,14 +2096,6 @@ html {
 /* ======================================================
    Section Navigation (v=8)
    ====================================================== */
-.services-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .service-card {
   opacity: 1;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
