@@ -130,7 +130,7 @@
   ----------------------------- */
   async function initI18n() {
     try {
-      const res = await fetch('/static/translations.json?v=5', {
+      const res = await fetch('/static/translations.json?v=12', {
         cache: 'no-store'
       });
 
@@ -224,6 +224,9 @@
     
     // ✅ 번역 함수
     t: (key) => t(currentLang, key),
+    
+    // ✅ 현재 언어 가져오기
+    getCurrentLanguage: () => currentLang,
     
     // ✅ 현재 언어 (읽기 전용)
     get lang() {
