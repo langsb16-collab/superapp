@@ -2135,3 +2135,172 @@ html {
 .nav-link.active::after {
   width: 100%;
 }
+
+/* ======================================================
+   Onboarding Service Selection (v=11)
+   ====================================================== */
+.service-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.service-select-card {
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.service-select-card input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.service-select-content {
+  padding: 24px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.service-select-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.service-select-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.service-select-content p {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.service-select-card:hover .service-select-content {
+  border-color: #1e3a8a;
+  background: rgba(30, 58, 138, 0.02);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-select-card input:checked + .service-select-content {
+  border-color: #1e3a8a;
+  background: rgba(30, 58, 138, 0.1);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.service-select-card input:checked + .service-select-content::after {
+  content: "✓";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  background: #1e3a8a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  color: #1f2937;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.form-input:hover {
+  border-color: #d1d5db;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.success-icon {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 24px;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.application-summary {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.application-summary h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item strong {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.summary-item span {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 767px) {
+  .service-select-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-select-content {
+    padding: 20px;
+  }
+  
+  .service-select-icon {
+    font-size: 40px;
+  }
+}
