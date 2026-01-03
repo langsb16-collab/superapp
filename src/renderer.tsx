@@ -21,12 +21,11 @@ export const renderer = jsxRenderer(({ children }) => {
       <body>
         {children}
         
-        {/* JavaScript - 로드 순서 중요! */}
-        <script src="/static/i18n.js?v=4"></script>
-        <script src="/static/chatbot-qa.js?v=4"></script>
-        <script src="/static/onboarding.js?v=4"></script>
-        <script src="/static/language-dropdown.js?v=4"></script>
-        <script src="/static/app.js?v=4"></script>
+        {/* JavaScript - 통합 버전 */}
+        <script src="/static/i18n.js?v=5"></script>
+        <script src="/static/chatbot-qa.js?v=5"></script>
+        <script src="/static/onboarding.js?v=5"></script>
+        <script src="/static/main.js?v=5"></script>
       </body>
     </html>
   )
