@@ -42,7 +42,13 @@
         nextBtn.onclick = () => opts.onNext?.();
       }
       if (closeBtn) {
-        closeBtn.onclick = () => opts.onClose?.();
+        closeBtn.onclick = () => {
+          if (opts.onClose) {
+            opts.onClose();
+          } else {
+            window.closeModal();
+          }
+        };
       }
 
       modal.classList.add('open');
