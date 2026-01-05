@@ -205,10 +205,20 @@
     const modalBody = modal.querySelector('.modal-body');
     const modalProgress = modal.querySelector('.modal-progress');
     const modalActions = modal.querySelector('.modal-actions');
+    const closeBtn = modal.querySelector('.modal-close');
     
     if (modalBody) modalBody.innerHTML = content;
     if (modalProgress) modalProgress.textContent = `${currentStep + 1} / 3`;
     if (modalActions) modalActions.style.display = 'none';
+    
+    // ❌ 닫기 버튼 이벤트 강제 연결
+    if (closeBtn) {
+      closeBtn.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+      };
+    }
     
     modal.classList.add('open');
     document.body.classList.add('modal-open');
